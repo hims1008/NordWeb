@@ -42,7 +42,7 @@ class AdminController extends Controller
                 ->with(["error" => $validate->errors()->toArray()]);
         }
     
-        if (Auth::guard('admins')->attempt([
+        if (Auth::guard('admin')->attempt([
             "email" => $request->input("email"),
             "password" => $request->input("password"),
             "key" => $request->input("key")
