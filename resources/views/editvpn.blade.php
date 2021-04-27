@@ -23,12 +23,12 @@
 
                         <div class="modal-body">
                             <div class="form-group">
-                                <label class="small mb-1" for="name">Nama (Negara)</label>
-                                <input name="name" class="form-control py-4" id="name" type="text" placeholder="Nama negara server vpn..." />
+                                <label class="small mb-1" for="name">Nama (Country)</label>
+                                <input name="name" class="form-control py-4" id="name" type="text" placeholder="Nama Country server vpn..." />
                             </div>
                             <div class="form-group">
-                                <label class="small mb-1" for="bendera"> ID / URL Bendera</label>
-                                <input name="bendera" class="form-control py-4" id="bendera" type="bendera" placeholder="Bendera negara server vpn..." />
+                                <label class="small mb-1" for="Flag"> ID / URL Flag</label>
+                                <input name="Flag" class="form-control py-4" id="Flag" type="Flag" placeholder="Flag Country server vpn..." />
                             </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="config">Config OVPN</label>
@@ -36,11 +36,11 @@
                             </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="username">Username VPN</label>
-                                <input name="username" class="form-control py-4" id="username" type="text" placeholder="Username buat config server vpn..." />
+                                <input name="username" class="form-control py-4" id="username" type="text" placeholder="Username For config server vpn..." />
                             </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="password">Password VPN</label>
-                                <input name="password" class="form-control py-4" id="password" type="password" placeholder="Password buat config server vpn..." />
+                                <input name="password" class="form-control py-4" id="password" type="password" placeholder="Password For config server vpn..." />
                             </div>
                             <div class="form-check">
                                 <input name="status" class="form-check-input" id="status_free" type="radio" value="0" checked/>
@@ -54,8 +54,8 @@
                         </div>
 
                         <div class="modal-footer flex-center">
-                            <input type="submit" value="Tambah" name="submit" class="btn btn-info"/>
-                            <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Tutup</a>
+                            <input type="submit" value="Add" name="submit" class="btn btn-info"/>
+                            <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Closed</a>
                         </div>
                     </div>
                 </div>

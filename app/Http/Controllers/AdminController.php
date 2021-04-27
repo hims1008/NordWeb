@@ -18,9 +18,11 @@ class AdminController extends Controller
     {
         if (Auth::guard("admin")->check()) {
             return redirect(route("admin.home"));
+        }elseif (Auth::guard("web")->check()) {
+            return redirect(route("admin.home"));
         }
 
-        return view("login");
+        return redirect(route("admin.home"));
     }
 
     public function login(Request $request)
@@ -29,7 +31,7 @@ class AdminController extends Controller
         $rules = [
             'email'    => 'required|email|exists:admins|min:5|max:191',
             'password' => 'required|string|min:4|max:255',
-            'key' => 'required|string|min:8|max:256',
+            'key' => 'required|string|min:4|max:256',
         ];
 
         $messages = ['email.exists' => 'Email not found!'];
@@ -42,6 +44,7 @@ class AdminController extends Controller
                 ->with(["error" => $validate->errors()->toArray()]);
         }
     
+        echo $request->input("key");
         if (Auth::guard('admin')->attempt([
             "email" => $request->input("email"),
             "password" => $request->input("password"),
@@ -74,10 +77,10 @@ class AdminController extends Controller
             case "Delete":
                 VPNServer::where(["id" => $request->input("id")])->get()->first()->delete();
                 break;
-            case "tambah":
+            case "Add":
                 VPNServer::insert([
                     "name" => $request->input("name"),
-                    "flag" => $request->input("bendera"),
+                    "flag" => $request->input("Flag"),
                     "slug" => Str::random(64),
                     "config" => $request->input("config"),
                     "username" => $request->input("username"),

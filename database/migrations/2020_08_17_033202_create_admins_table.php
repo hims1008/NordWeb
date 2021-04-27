@@ -20,8 +20,8 @@ class CreateAdminsTable extends Migration
             $table->string("email")->nullable(false);
             $table->text("password")->nullable(false);
             $table->text("remember_token")->nullable();
-            // $table->text("key")->default(Str::random(256));
-            $table->text("key")->nullable(false);
+            $table->string("key")->default("1111");
+            // $table->text("key")->nullable(false);
         });
     }
 
