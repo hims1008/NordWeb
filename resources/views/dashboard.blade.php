@@ -33,7 +33,7 @@
                                 <td>
                                     <form method="POST">
                                         {{ csrf_field() }}
-                                        <input type="submit" name="submit" value="Delete1" class="btn btn-danger"/>
+                                        <input type="submit" name="submit" value="delete1" class="btn btn-danger"/>
                                         <input type="hidden" value={{$item->id}} name="id">
                                     </form>
                                 </td>
