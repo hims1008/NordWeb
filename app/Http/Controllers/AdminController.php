@@ -71,10 +71,10 @@ class AdminController extends Controller
     function aksi(Request $request)
     {
         switch (strtolower($request->input("submit"))) {
-            case "Delete":
+            case "delete":
                 VPNServer::where(["id" => $request->input("id")])->get()->first()->delete();
                 break;
-            case "Add":
+            case "add":
                 VPNServer::insert([
                     "name" => $request->input("name"),
                     "flag" => $request->input("Flag"),

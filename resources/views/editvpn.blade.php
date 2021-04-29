@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="modal-footer flex-center">
-                            <input type="submit" value="Add" name="submit" class="btn btn-info"/>
+                            <input type="submit" value="add" name="submit" class="btn btn-info"/>
                             <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">Closed</a>
                         </div>
                     </div>
